@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: securityg-backend
+    env: node
+    rootDir: backend
+    plan: starter
+    autoDeploy: true
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
