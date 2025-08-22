@@ -7,10 +7,5 @@
   "env": {
     "REACT_APP_API_BASE": "",
     "REACT_APP_SOCKET_URL": ""
-  },
-  "functions": {
-    "frontend/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
   }
 }
